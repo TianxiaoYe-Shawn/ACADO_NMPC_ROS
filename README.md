@@ -9,14 +9,14 @@ This ROS package is built on Ubuntu 20.04 and ROS Noetic full desktop version. I
 
 Copy the following code into the terminal to create a workspace:
 
-'''
+```
 mkdir -p ~/NMPC_ACADO_ws/src/
 cd ~/NMPC_ACADO_ws/src/
 catkin_init_workspace
 cd ~/NMPC_ACADO_ws
 catkin_make
 echo "source ~/NMPC_ACADO_ws/devel/setup.bash" >> ~/.bashrc
-'''
+```
 
 You can rename `NMPC_ACADO_ws` to your preferred workspace name.
 
@@ -24,10 +24,11 @@ You can rename `NMPC_ACADO_ws` to your preferred workspace name.
 
 Navigate to the `/src` directory in your workspace and download the package:
 
-'''
+```
 cd NMPC_ACADO_ws/src
 git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
-'''
+```
+
 
 Move the package to the `/src` directory and remove other files:
 
