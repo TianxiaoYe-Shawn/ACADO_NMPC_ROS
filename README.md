@@ -8,7 +8,7 @@
 
 ## 1.Ubuntu和ROS版本
 
-本ros包构建在Ubuntu20.04和ROS Noetic版本上。建议按照这个版本来，后续的JACKAL模拟器也是在这个版本上构建的。
+本ros包构建在Ubuntu20.04和ROS Noetic桌面完全版上。建议按照这个版本来，后续的JACKAL模拟器也是在这个版本上构建的。
 
 ## 2.创建ROS工作空间
 
@@ -91,3 +91,10 @@ catkin_make
 ```
 sudo apt-get install ros-noetic-jackal-simulator ros-noetic-jackal-desktop ros-noetic-jackal-navigation
 ```
+修改模拟器的环境，我们需要一个空旷的场地
+```
+cd /opt/ros/noetic/share/jackal_gazebo/launch/
+sudo vi jackal_world.launch
+```
+将`<arg name="world_name..."`那句修改成`<arg name="world_name" default="$(find gazebo_ros)/launch/empty_world.launch" />`
+## 7.
