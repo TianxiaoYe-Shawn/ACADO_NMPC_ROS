@@ -95,6 +95,12 @@ cd ../../acado_mpc_export
 make
 ```
 
+add `include` folder in your ROS package:
+```
+cd ~/NMPC_ACADO_ws/src/acado_mpc/
+mkdir include
+```
+
 Compile the entire ROS package:
 
 ```
@@ -262,6 +268,12 @@ make
 mv symbolic_mpc_export/* ../../acado_mpc_export/
 cd ../../acado_mpc_export
 make
+```
+
+添加 `include` 文件夹（存放头文件的，目前是空的，你可以把你未来写的头文件放进去）:
+```
+cd ~/NMPC_ACADO_ws/src/acado_mpc/
+mkdir include
 ```
 
 编译整个ros功能包
