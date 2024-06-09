@@ -22,16 +22,20 @@ cd ~/NMPC_ACADO_ws
 catkin_make
 echo "source ~/NMPC_ACADO_ws/devel/setup.bash" >> ~/.bashrc
 ```
+
 你可以将`NMPC_ACADO_ws`修改成你定义的工作空间名。
 
 ## 3.下载ROS功能包
 
 进入你工作空间下的`/src`目录，下载功能包：
+
 ```
 cd NMPC_ACADO_ws/src
 git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 ```
+
 将功能包移动到`/src`目录下并删除其他的文件:
+
 ```
 mv ACADO_NMPC_ROS/acado_mpc ..
 rm -r ACADO_NMPC_ROS
