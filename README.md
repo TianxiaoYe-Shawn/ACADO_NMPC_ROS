@@ -31,3 +31,12 @@ echo "source ~/NMPC_ACADO_ws/devel/setup.bash" >> ~/.bashrc
 cd NMPC_ACADO_ws/src
 git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 ```
+将功能包移动到`/src`目录下并删除其他的文件:
+```
+mv ACADO_NMPC_ROS/acado_mpc ..
+rm -r ACADO_NMPC_ROS
+```
+
+## 4.安装ACADO
+
+安装依赖：
