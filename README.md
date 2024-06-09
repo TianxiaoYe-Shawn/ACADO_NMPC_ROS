@@ -29,5 +29,5 @@ echo "source ~/NMPC_ACADO_ws/devel/setup.bash" >> ~/.bashrc
 进入你工作空间下的`/src`目录，下载功能包：
 ```
 cd NMPC_ACADO_ws/src
-
+git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 ```
