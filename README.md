@@ -172,7 +172,7 @@ At this point, you should see the JACKAL vehicle start moving and following the 
 
 ## 1.Ubuntu和ROS版本
 
-本ros包构建在Ubuntu20.04和ROS Noetic桌面完全版上。建议按照这个版本来，后续的JACKAL模拟器也是在这个版本上构建的。
+本ros功能包构建在Ubuntu20.04和ROS Noetic桌面完全版上。建议按照这个版本来，后续的JACKAL模拟器也是在这个版本上构建的。
 
 ## 2.创建ROS工作空间
 
