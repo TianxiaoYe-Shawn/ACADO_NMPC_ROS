@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="mpc_ros" type="mpc_node" name="mpc_node" output="screen">
+        <param name="weight_x"  type="double"   value="100.0" />
+        <param name="weight_y"  type="double"   value="100.0" />
+        <param name="weight_q"  type="double"   value="0.5" />
+        <param name="weight_v" type="double"   value="10.0" />
+        <param name="weight_w"  type="double"   value="5.0" />
+    </node>
+</launch>

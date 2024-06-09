@@ -1,0 +1,11 @@
+<launch>
+    <!-- Run the odom_publisher node -->
+    <node name="odom_publisher" pkg="acado_mpc" type="odom_publisher" output="screen"/>
+
+    <!-- Run the trajectory_publisher node -->
+    <node name="trajectory_publisher" pkg="acado_mpc" type="trajectory_publisher" output="screen"/>
+
+    <!-- Open RViz with a specific configuration file -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find acado_mpc)/rviz/acado.rviz" output="screen"/>
+</launch>
+
