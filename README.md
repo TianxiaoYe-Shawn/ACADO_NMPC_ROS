@@ -6,6 +6,28 @@
 
 # 从零开始搭建基于ACADO的轨迹跟踪ROS功能包
 
-## 1.Ubuntu系统和ROS环境搭建
+## 1.Ubuntu和ROS版本
 
-建议使用Ubuntu20.04和ROS Noetic版本（和我的版本一致）。如果你无法切换版本，编译时请根据报错修改文件中的`noetic`为你的ROS版本号（前提是都是ROS1）
+本ros包构建在Ubuntu20.04和ROS Noetic版本上。建议按照这个版本来，后续的JACKAL模拟器也是在这个版本上构建的。
+
+## 2.创建ROS工作空间
+
+复制以下代码到终端以创建工作空间：
+
+```
+mkdir -p NMPC_ACADO_ws/src/
+cd NMPC_ACADO_ws/src/
+catkin_init_workspace
+cd ~/NMPC_ACADO_ws
+catkin_make
+echo "source ~/NMPC_ACADO_ws/devel/setup.bash" >> ~/.bashrc
+```
+你可以将`NMPC_ACADO_ws`修改成你定义的工作空间名。
+
+## 3.下载ROS功能包
+
+进入你工作空间下的`/src`目录，下载功能包：
+```
+cd NMPC_ACADO_ws/src
+
+```
