@@ -3,7 +3,7 @@
 # Build ACADO NMPC ROS package from scratch
 ## 1. Ubuntu and ROS Versions
 
-This ROS package is built on Ubuntu 20.04 and ROS Noetic full desktop version. It is recommended to follow this version, as the JACK and ROS Noetic full desktop version. It is recommended to follow this version, as the JACKAL simulator is also built on it.
+This ROS package is built on Ubuntu 20.04 and ROS Noetic full desktop version. It is recommended to follow this version, as the JACKAL simulator is also built on it.
 
 ## 2. Creating a ROS Workspace
 
@@ -133,7 +133,7 @@ roslaunch jackal_gazebo jackal_world.launch
 
 You should see the JACKAL vehicle parked in Gazebo.
 
-Then open the tracking test environment (including publishing trajectories, configuring rviz):
+Then open the tracking test environment (including publishing trajectory, configuring rviz):
 
 '''
 roslaunch acado_mpc tracking_env.launch
