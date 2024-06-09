@@ -15,8 +15,8 @@
 复制以下代码到终端以创建工作空间：
 
 ```
-mkdir -p NMPC_ACADO_ws/src/
-cd NMPC_ACADO_ws/src/
+mkdir -p /home/~/NMPC_ACADO_ws/src/
+cd /home/~/NMPC_ACADO_ws/src/
 catkin_init_workspace
 cd ~/NMPC_ACADO_ws
 catkin_make
@@ -60,4 +60,34 @@ sudo make install
 配置环境变量：
 ```
 echo "source ~/ACADOtoolkit/build/acado_env.sh" >> ~/.bashrc
+```
+
+## 5.编译功能包
+ACADO的优点就是能够通过符号化的语言生成高效的c代码。首先在`acado_mpc/acado_export_code`中的`symbolic_mpc.cpp`文件修改你自己的mpc模型（第一次跑建议不要动）。
+
+然后生成c代码包：
+```
+cd /home/~/NMPC_ACADO_ws/src/acado_mpc/acado_export_code
+/acado_mpc/acado_export_code
+cmake ..
+make
+./mpc
+```
+移动生成的代码并搭建静态库
+```
+mv symbolic_mpc_export/* ../../acado_mpc_export/
+cd ../../acado_mpc_export
+make
+```
+编译整个ros功能包
+```
+cd ~/NMPC_ACADO_ws
+catkin_make
+```
+如果一切成功，至此你的功能包就已经搭建完毕了。如果你没有任何的测试环境，接下来这个JACKAL模拟器是不错的选择。
+
+## 6.搭建JACKAL模拟器
+一键安装JACKAL小车模拟器
+```
+sudo apt-get install ros-noetic-jackal-simulator ros-noetic-jackal-desktop ros-noetic-jackal-navigation
 ```
