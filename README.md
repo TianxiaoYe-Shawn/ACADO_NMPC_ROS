@@ -73,7 +73,7 @@ sudo make install
 echo "source ~/ACADOtoolkit/build/acado_env.sh" >> ~/.bashrc
 ```
 
-## 5.编译功能包
+## 5.编译ROS功能包
 
 ACADO的优点就是能够通过符号化的语言生成高效的c代码。首先在`acado_mpc/acado_export_code`中的`symbolic_mpc.cpp`文件修改你自己的mpc模型（第一次跑建议不要动）。
 
