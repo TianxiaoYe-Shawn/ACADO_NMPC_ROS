@@ -29,7 +29,7 @@ You can rename `NMPC_ACADO_ws` to your preferred workspace name.
 Navigate to the `/src` directory in your workspace and download the package:
 
 ```
-cd NMPC_ACADO_ws/src
+cd ~/NMPC_ACADO_ws/src
 git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 ```
 
@@ -37,7 +37,7 @@ git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 Move the package to the `/src` directory and remove other files:
 
 ```
-mv ACADO_NMPC_ROS/acado_mpc ..
+mv ACADO_NMPC_ROS/acado_mpc .
 rm -r ACADO_NMPC_ROS
 ```
 
@@ -49,10 +49,10 @@ Install dependencies:
 sudo apt-get install gcc g++ cmake git gnuplot doxygen graphviz
 ```
 
-Choose any working directory (I use `/home/~/`) to download the ACADO source code:
+Choose any working directory (I use `~/`) to download the ACADO source code:
 
 ```
-cd /home/~/
+cd
 git clone https://github.com/acado/acado.git -b stable ACADOtoolkit
 ```
 
@@ -81,6 +81,7 @@ Then generate the C code package:
 
 ```
 cd ~/NMPC_ACADO_ws/src/acado_mpc/acado_export_code
+mkdir build && cd build
 cmake ..
 make
 ./mpc
@@ -183,8 +184,8 @@ At this point, you should see the JACKAL vehicle start moving and following the 
 复制以下代码到终端以创建工作空间：
 
 ```
-mkdir -p /home/~/NMPC_ACADO_ws/src/
-cd /home/~/NMPC_ACADO_ws/src/
+mkdir -p ~/NMPC_ACADO_ws/src/
+cd ~/NMPC_ACADO_ws/src/
 catkin_init_workspace
 cd ~/NMPC_ACADO_ws
 catkin_make
@@ -198,14 +199,14 @@ echo "source ~/NMPC_ACADO_ws/devel/setup.bash" >> ~/.bashrc
 进入你工作空间下的`/src`目录，下载功能包：
 
 ```
-cd NMPC_ACADO_ws/src
+cd ~/NMPC_ACADO_ws/src
 git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 ```
 
 将功能包移动到`/src`目录下并删除其他的文件:
 
 ```
-mv ACADO_NMPC_ROS/acado_mpc ..
+mv ACADO_NMPC_ROS/acado_mpc .
 rm -r ACADO_NMPC_ROS
 ```
 
@@ -220,7 +221,7 @@ sudo apt-get install gcc g++ cmake git gnuplot doxygen graphviz
 任意选择一个工作目录（我是在`/home/~/`）下载ACADO源码：
 
 ```
-cd /home/~/
+cd
 git clone https://github.com/acado/acado.git -b stable ACADOtoolkit
 ```
 
@@ -248,8 +249,8 @@ ACADO的优点就是能够通过符号化的语言生成高效的c代码。首�
 然后生成c代码包：
 
 ```
-cd /home/~/NMPC_ACADO_ws/src/acado_mpc/acado_export_code
-/acado_mpc/acado_export_code
+cd ~/NMPC_ACADO_ws/src/acado_mpc/acado_export_code
+mkdir build && cd build
 cmake ..
 make
 ./mpc
