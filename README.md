@@ -40,3 +40,24 @@ rm -r ACADO_NMPC_ROS
 ## 4.安装ACADO
 
 安装依赖：
+```
+sudo apt-get install gcc g++ cmake git gnuplot doxygen graphviz
+```
+任意选择一个工作目录（我是在`/home/~/`）下载ACADO源码：
+```
+cd /home/~/
+git clone https://github.com/acado/acado.git -b stable ACADOtoolkit
+```
+安装：
+```
+cd ACADOtoolkit
+mkdir build
+cd build
+cmake ..
+make
+sudo make install
+```
+配置环境变量：
+```
+echo "source ~/ACADOtoolkit/build/acado_env.sh" >> ~/.bashrc
+```
