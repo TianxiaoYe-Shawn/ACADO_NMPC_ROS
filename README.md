@@ -213,13 +213,6 @@ cd ~/NMPC_ACADO_ws/src
 git clone https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS.git
 ```
 
-将功能包移动到`/src`目录下并删除其他的文件:
-
-```
-mv ACADO_NMPC_ROS/acado_mpc .
-rm -r ACADO_NMPC_ROS
-```
-
 ## 4.安装ACADO
 
 安装依赖：
@@ -306,7 +299,11 @@ sudo vi jackal_world.launch
 
 按`i`进入编辑模式
 
-将`<arg name="world_name..."`那句修改成`<arg name="world_name" default="$(find gazebo_ros)/launch/empty_world.launch" />`
+将`<arg name="world_name..."`那句修改成 `<arg name="world_name" default="$(find gazebo_ros)/launch/empty_world.launch" />`
+
+我们还需要调整小车初始位姿与轨迹开头重合
+
+将 `x` `y` `z` `yaw` 的值修改成 `0 0 1.0 0.78`
 
 然后按`ESC`输入`:wq`保存并退出。
 
@@ -351,7 +348,7 @@ roslaunch acado_mpc set_weight.launch
 紧接着在这个终端里打开mpc控制节点：
 
 ```
-rosrun acado_mpc mpc_node
+rosrun acado_mpc mpc_gt_node
 ```
 
 至此你应该能看到JACKAL小车开始移动并进行轨迹跟踪。
