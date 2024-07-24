@@ -47,9 +47,17 @@ add_executable(mpc_node src/mpc_node.cpp)
 set_target_properties(ACADO PROPERTIES IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/acado_mpc_export/libacado_exported_rti.a")
 target_link_libraries(mpc_node ${catkin_LIBRARIES} ACADO)
 
+add_executable(mpc_gt_node src/mpc_gt_node.cpp)
+set_target_properties(ACADO PROPERTIES IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/acado_mpc_export/libacado_exported_rti.a")
+target_link_libraries(mpc_gt_node ${catkin_LIBRARIES} ACADO)
+
 add_executable(trajectory_publisher src/trajectory_publisher.cpp)
 target_link_libraries(trajectory_publisher ${catkin_LIBRARIES})
 add_dependencies(trajectory_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_executable(gt_publisher src/gt_publisher.cpp)
+target_link_libraries(gt_publisher ${catkin_LIBRARIES})
+add_dependencies(gt_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 add_executable(odom_publisher src/odom_publisher.cpp)
 target_link_libraries(odom_publisher ${catkin_LIBRARIES})

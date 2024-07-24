@@ -1,6 +1,9 @@
 <launch>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 1 world map"/>
+    
     <!-- Run the odom_publisher node -->
-    <node name="odom_publisher" pkg="acado_mpc" type="odom_publisher" output="screen"/>
+    <node name="gt_publisher" pkg="acado_mpc" type="gt_publisher" output="screen"/>
 
     <!-- Run the trajectory_publisher node -->
     <node name="trajectory_publisher" pkg="acado_mpc" type="trajectory_publisher" output="screen"/>

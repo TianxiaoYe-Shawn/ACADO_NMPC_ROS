@@ -195,7 +195,7 @@ int main(int argc, char **argv)
 
 		// Predict path
 		nav_msgs::Path predict_path;
-		predict_path.header.frame_id = "/odom";
+		predict_path.header.frame_id = "/map";
 		predict_path.header.stamp = ros::Time::now();
 		for (int i = 0; i < ACADO_N; i++)
 		{
