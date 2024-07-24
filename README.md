@@ -2,7 +2,7 @@
 
 The following is the effect based on the JACKAL gazebo simulator:
 
-https://github.com/TianxiaoYe-Shawn/ACADO_NMPC_ROS/assets/170770816/e7f40b8e-ccb2-4c54-b93e-3e3bb71cb99b
+https://github.com/user-attachments/assets/46393558-829d-42ab-9687-2b6e7f1e9f6f
 
 # Build ACADO NMPC ROS package from scratch
 ## 1. Ubuntu and ROS Versions
