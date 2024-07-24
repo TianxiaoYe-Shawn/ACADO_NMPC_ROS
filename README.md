@@ -129,6 +129,10 @@ Press `i` to enter edit mode.
 
 Change the line `<arg name="world_name..."` to `<arg name="world_name" default="$(find gazebo_ros)/launch/empty_world.launch" />`
 
+Then modify the spawn pose of Jackal to match the trajectory in `jackal_world.launch`:
+
+Change the `x` `y` `z` `yaw` value to `0 0 1.0 0.78`
+
 Then press `ESC`, type `:wq` to save and exit.
 
 The JACKAL simulator is now fully set up.
